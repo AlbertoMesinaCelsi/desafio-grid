@@ -1,0 +1,162 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto"
+}
+
+/**conainer estructura sitio con grid**/
+
+.grid-container {
+    max-width: 1600px;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    margin: 0 auto;
+    grid-template-areas: 
+    "cabecera cabecera"
+    "menu principal"
+    "pie pie"
+    ;
+    grid-template-columns: 20% 1fr;
+    height: 300px;
+    
+}
+
+/**header con flex**/
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.cabecera {
+    grid-area: cabecera;
+    color: black;
+    height: 80px;
+    background-color: rgb(7, 74, 110);
+    color: white;
+}
+
+/**menu con flex**/
+
+.menu {
+    grid-area: menu;
+    background-color: rgb(224, 227, 231);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li {
+   color: black;
+   margin-top: 8px; 
+   font-weight: 500;
+}
+
+.menu ul p {
+    color: rgb(102, 102, 113);
+    padding-top: 0px; 
+    font-weight: 500;
+    font-size: 18px;
+ }
+
+.menu h2 {
+   padding-top: 20px;
+   padding-bottom: 20px; 
+   font-size: 25px;
+}
+
+.menu ul {
+    padding-top: 8px; 
+}
+
+/**grid productos**/
+
+.producto {
+    grid-area: principal;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));/*genera layout responsive sin media query*/
+    justify-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(224, 227, 231);
+    column-gap: 15px;
+    row-gap: 15px;
+}
+
+/**card con flex**/
+
+.card {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    height: 100%;
+}
+
+.card-centrado {
+    height: 100%;
+}
+
+.card-centrado img {
+    object-fit:contain;
+}
+
+
+.card img { 
+    width: 100%;
+    height: 100%;
+}
+
+.card button {
+    width: 100%;
+    margin-bottom: -20px;
+}
+
+.card button p {
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(7, 74, 110);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.card h3 {
+    color: rgb(56, 60, 59);
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.card .precio {
+    color: rgb(154, 157, 160);
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+/**footer**/
+
+.pie {
+    grid-area: pie;
+    background-color:rgb(177, 179, 181);
+    text-align: center;
+    height: 80px;
+    padding-top: 30px;
+    font-size: 20px;
+}
+
+
+
